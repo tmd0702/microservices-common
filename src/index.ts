@@ -11,11 +11,17 @@ export * from './middlewares/verify-token';
 
 export * from './events/base-consumer';
 export * from './events/base-producer';
-export * from './events/subjects';
+export * from './events/kafka-wrapper';
+export * from './events/topics';
 
 export * from './events/enums/user-status';
+export * from './events/enums/email-status';
+export * from './events/enums/sms-status';
 export * from './events/user-created-event';
 export * from './events/user-updated-event';
+export * from './events/email-verification-event';
+export * from './events/sms-verification-event';
+
 // export * from './events/enums/order-status';
 // export * from './events/order-cancelled-event';
 // export * from './events/order-created-event';

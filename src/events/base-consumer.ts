@@ -1,16 +1,15 @@
 import {Consumer as KafkaConsumer, KafkaMessage, logLevel, EachMessagePayload} from 'kafkajs';
-import { Subjects } from './subjects';
+import { Topics } from './topics';
 
 interface Event {
-    subject: Subjects;
+    topic: Topics;
     data: any;
 }
 
 export abstract class Consumer<T extends Event> {
-    abstract subject: T['subject'];
+    abstract topic: T['topic'];
     protected client: KafkaConsumer;
-    abstract topicName: string;
-    abstract onMessage(data: T['data'], message: KafkaMessage): void;
+    abstract onMessage(data: T['data']): void;
 
     constructor(client: KafkaConsumer) {
         this.client = client;
@@ -20,15 +19,14 @@ export abstract class Consumer<T extends Event> {
     }
 
     async consume() {
-        await this.client.connect();
-        await this.client.subscribe({ topic: this.topicName, fromBeginning: true});
+        await this.client.subscribe( { topic: this.topic }); //fromBeginning: true
         this.subscriptionOptions()
-        console.log('Consumer connected and subscribed!');
+        console.log(`Consumer subscribed to ${this.topic}!`);
         await this.client.run({
             eachMessage: async ({ topic, partition, message }: EachMessagePayload) => {
-                console.log(`Message received: ${this.subject} / ${this.topicName} / ${partition}`);
+                console.log(`Message received: ${this.topic} / ${partition}`);
                 const parsedData = this.parseMessage(message);
-                this.onMessage(parsedData, message);
+                this.onMessage(parsedData);
             }
         });
     }

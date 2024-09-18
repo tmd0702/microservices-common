@@ -1,10 +1,10 @@
-import { Subjects } from './subjects';
+import { Topics } from './topics';
 import { UserStatus } from './enums/user-status';
 
 export interface UserCreatedEvent {
-  subject: Subjects.UserCreated;
-  data: {
-    id: string;
-    status: UserStatus
-  };
+    topic: Topics.UserCreated;
+    data: {
+      id: string;
+      status: UserStatus
+    };
 }

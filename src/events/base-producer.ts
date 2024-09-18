@@ -1,18 +1,17 @@
 import { Producer as KafkaProducer } from 'kafkajs';
+import { v4 as uuidv4 } from 'uuid';
 
 const config = require("config");
-import { Subjects } from './subjects';
+import { Topics } from './topics';
 
 interface Event {
-    subject: Subjects;
+    topic: Topics;
     data: any;
 }
 export abstract class Producer<T extends Event> {
-    abstract subject: T['subject'];
-    abstract topicName: string;
-    protected client: KafkaProducer;
-    protected ackWait = 5 * 1000;
+    abstract topic: T['topic'];
 
+    protected client: KafkaProducer;
     constructor(client: KafkaProducer) {
         this.client = client;
     }
@@ -20,9 +19,12 @@ export abstract class Producer<T extends Event> {
     produce(data: T['data']): Promise<void> {
         return new Promise((resolve, reject) => {
             this.client.send({
-                topic: this.topicName,
+                topic: this.topic,
                 messages: [
-                    data
+                    {
+                        key: uuidv4(),
+                        value: JSON.stringify(data),
+                    },
                 ],
             }).then((metadata) => {
                 resolve();
