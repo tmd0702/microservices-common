@@ -10,7 +10,7 @@ export class KafkaWrapper {
         const kafkaConfig: KafkaConfig = { brokers: brokers }
         const kafka = new Kafka(kafkaConfig);
         this._producer = kafka.producer();
-        this._consumer = kafka.consumer({groupId: groupId});
+        this._consumer = kafka.consumer({groupId: groupId, heartbeatInterval: 10000});
     }
 
     get producer() {
