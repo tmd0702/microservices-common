@@ -1,8 +1,7 @@
 import { Topics } from './topics';
-import {EmailStatus} from "./enums/email-status";
-
+import { EmailStatus } from "./enums/email-status";
 export interface EmailVerificationCompleteEvent {
-    topic: Topics.EmailVerificationCompleted;
+    topic: Topics.EmailVerificationNeeded;
     data: {
         userId: string;
         fullName: string;

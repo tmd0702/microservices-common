@@ -1,7 +1,6 @@
 import { Topics } from './topics';
-
-export interface SmsVerificationCompleteEvent {
-    topic: Topics.SMSVerificationCompleted;
+export interface SMSVerificationEvent {
+    topic: Topics.SMSVerificationNeeded;
     data: {
         userId: string;
         fullName: string;

@@ -5,5 +5,7 @@ export enum Topics {
 
     // Auth
     EmailVerificationNeeded = 'verification.email',
+    EmailVerificationCompleted = 'verification.email.complete',
     SMSVerificationNeeded = 'verification.sms',
+    SMSVerificationCompleted = 'verification.sms.complete',
 }
