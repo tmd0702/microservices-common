@@ -20,6 +20,7 @@ export * from './events/enums/sms-status';
 export * from './events/user-created-event';
 export * from './events/user-updated-event';
 export * from './events/email-verification-event';
+export * from './events/email-verification-complete-event';
 export * from './events/sms-verification-event';
 
 // export * from './events/enums/order-status';
