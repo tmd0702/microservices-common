@@ -8,4 +8,8 @@ export enum Topics {
     EmailVerificationCompleted = 'verification.email.complete',
     SMSVerificationNeeded = 'verification.sms',
     SMSVerificationCompleted = 'verification.sms.complete',
+
+    // Store
+    StoreCreated = 'store.created',
+    StoreUpdated = 'store.updated'
 }
