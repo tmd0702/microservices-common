@@ -11,5 +11,16 @@ export enum Topics {
 
     // Store
     StoreCreated = 'store.created',
-    StoreUpdated = 'store.updated'
+    StoreUpdated = 'store.updated',
+
+    // Item
+    ItemCreated = 'item.created',
+    ItemUpdated = 'item.updated',
+
+    // Payment
+    PaymentCreated = 'payment.created',
+
+    // Order
+    OrderCreated = 'order.created',
+    OrderCancelled = 'order.cancelled'
 }
