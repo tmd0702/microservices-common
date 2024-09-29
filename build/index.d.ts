@@ -5,15 +5,12 @@ export * from './errors/not-authorized-error';
 export * from './errors/not-found-error';
 export * from './errors/request-validation-error';
 export * from './errors/invalid-token';
-
 export * from './middlewares/error-handler';
 export * from './middlewares/verify-token';
-
 export * from './events/base-consumer';
 export * from './events/base-producer';
 export * from './events/kafka-wrapper';
 export * from './events/topics';
-
 export * from './events/enums/user-status';
 export * from './events/enums/store-status';
 export * from './events/enums/email-status';
@@ -28,7 +25,3 @@ export * from './events/store-created-event';
 export * from './events/store-updated-event';
 export * from './events/item-created-event';
 export * from './events/item-updated-event';
-export * from './events/order-created-event';
-export * from './events/payment-created-event';
-
-export * from './events/enums/order-status';
