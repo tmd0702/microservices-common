@@ -33,3 +33,6 @@ export * from './events/payment-created-event';
 
 export * from './events/enums/payment-status';
 export * from './events/enums/order-status';
+export * from './events/enums/transaction-status';
+
+export * from './services/ports';
