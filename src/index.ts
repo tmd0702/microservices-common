@@ -31,4 +31,5 @@ export * from './events/item-updated-event';
 export * from './events/order-created-event';
 export * from './events/payment-created-event';
 
+export * from './events/enums/payment-status';
 export * from './events/enums/order-status';
