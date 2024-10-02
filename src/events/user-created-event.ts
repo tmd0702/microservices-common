@@ -5,6 +5,6 @@ export interface UserCreatedEvent {
     topic: Topics.UserCreated;
     data: {
       id: string;
-      status: UserStatus
-    };
+      status: UserStatus;
+    }
 }
