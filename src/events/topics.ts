@@ -22,5 +22,13 @@ export enum Topics {
 
     // Order
     OrderCreated = 'order.created',
-    OrderCancelled = 'order.cancelled'
+    OrderCancelled = 'order.cancelled',
+
+    // Department
+    DepartmentCreated = 'department.created',
+    DepartmentUpdated = 'department.updated',
+
+    // Employee
+    EmployeeCreated = 'employee.created',
+    EmployeeUpdated = 'employee.updated'
 }
