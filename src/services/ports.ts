@@ -7,5 +7,6 @@ export enum Ports {
     WALLETS = 3855,
     EMPLOYEES = 3856,
     DEPARTMENTS = 3857,
+    ATTENDANCES = 3858,
     EVENT_STORE = 3860
 }
