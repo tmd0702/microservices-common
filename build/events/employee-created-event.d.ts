@@ -8,6 +8,7 @@ export interface EmployeeCreatedEvent {
         last_name: string;
         position: string;
         phone_number: string;
+        department_id?: string;
         email: string;
     };
 }

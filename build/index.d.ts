@@ -34,4 +34,5 @@ export * from './events/employee-updated-event';
 export * from './events/enums/payment-status';
 export * from './events/enums/order-status';
 export * from './events/enums/transaction-status';
+export * from './events/enums/attendance-status';
 export * from './services/ports';
