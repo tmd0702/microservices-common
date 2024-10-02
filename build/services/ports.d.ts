@@ -5,6 +5,7 @@ export declare enum Ports {
     PAYMENTS = 3853,
     STORES = 3854,
     WALLETS = 3855,
-    FACE_RECOGNITION = 3856,
+    EMPLOYEES = 3856,
+    DEPARTMENTS = 3857,
     EVENT_STORE = 3860
 }

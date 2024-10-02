@@ -9,6 +9,7 @@ var Ports;
     Ports[Ports["PAYMENTS"] = 3853] = "PAYMENTS";
     Ports[Ports["STORES"] = 3854] = "STORES";
     Ports[Ports["WALLETS"] = 3855] = "WALLETS";
-    Ports[Ports["FACE_RECOGNITION"] = 3856] = "FACE_RECOGNITION";
+    Ports[Ports["EMPLOYEES"] = 3856] = "EMPLOYEES";
+    Ports[Ports["DEPARTMENTS"] = 3857] = "DEPARTMENTS";
     Ports[Ports["EVENT_STORE"] = 3860] = "EVENT_STORE";
 })(Ports || (exports.Ports = Ports = {}));

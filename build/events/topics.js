@@ -22,4 +22,10 @@ var Topics;
     // Order
     Topics["OrderCreated"] = "order.created";
     Topics["OrderCancelled"] = "order.cancelled";
+    // Department
+    Topics["DepartmentCreated"] = "department.created";
+    Topics["DepartmentUpdated"] = "department.updated";
+    // Employee
+    Topics["EmployeeCreated"] = "employee.created";
+    Topics["EmployeeUpdated"] = "employee.updated";
 })(Topics || (exports.Topics = Topics = {}));

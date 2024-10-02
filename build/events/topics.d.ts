@@ -11,5 +11,9 @@ export declare enum Topics {
     ItemUpdated = "item.updated",
     PaymentCreated = "payment.created",
     OrderCreated = "order.created",
-    OrderCancelled = "order.cancelled"
+    OrderCancelled = "order.cancelled",
+    DepartmentCreated = "department.created",
+    DepartmentUpdated = "department.updated",
+    EmployeeCreated = "employee.created",
+    EmployeeUpdated = "employee.updated"
 }
