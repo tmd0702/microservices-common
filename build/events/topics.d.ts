@@ -15,5 +15,9 @@ export declare enum Topics {
     DepartmentCreated = "department.created",
     DepartmentUpdated = "department.updated",
     EmployeeCreated = "employee.created",
-    EmployeeUpdated = "employee.updated"
+    EmployeeUpdated = "employee.updated",
+    CameraCreated = "camera.created",
+    CameraUpdated = "camera.updated",
+    LocationCreated = "location.created",
+    LocationUpdated = "location.updated"
 }

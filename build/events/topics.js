@@ -28,4 +28,9 @@ var Topics;
     // Employee
     Topics["EmployeeCreated"] = "employee.created";
     Topics["EmployeeUpdated"] = "employee.updated";
+    // Camera
+    Topics["CameraCreated"] = "camera.created";
+    Topics["CameraUpdated"] = "camera.updated";
+    Topics["LocationCreated"] = "location.created";
+    Topics["LocationUpdated"] = "location.updated";
 })(Topics || (exports.Topics = Topics = {}));
