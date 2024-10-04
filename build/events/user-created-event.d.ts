@@ -8,6 +8,6 @@ export interface UserCreatedEvent {
         last_name?: string;
         email?: string;
         phone_number?: string;
-        status: UserStatus;
+        status?: UserStatus;
     };
 }
