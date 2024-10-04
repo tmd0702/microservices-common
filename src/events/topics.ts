@@ -30,5 +30,11 @@ export enum Topics {
 
     // Employee
     EmployeeCreated = 'employee.created',
-    EmployeeUpdated = 'employee.updated'
+    EmployeeUpdated = 'employee.updated',
+
+    // Camera
+    CameraCreated = 'camera.created',
+    CameraUpdated = 'camera.updated',
+    LocationCreated = 'location.created',
+    LocationUpdated = 'location.updated'
 }
