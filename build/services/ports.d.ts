@@ -1,4 +1,4 @@
-export enum Ports {
+export declare enum Ports {
     IDENTITY = 3850,
     ITEMS = 3851,
     ORDERS = 3852,
@@ -8,7 +8,5 @@ export enum Ports {
     EMPLOYEES = 3856,
     DEPARTMENTS = 3857,
     ATTENDANCES = 3858,
-    VEHICLE_PARKING = 3859,
-    EVENT_STORE = 3860,
-    TRACKING = 3861
+    EVENT_STORE = 3860
 }
