@@ -10,5 +10,6 @@ export interface UserCreatedEvent {
       email?: string;
       phone_number?: string;
       status?: UserStatus;
+      face_id?: string;
     }
 }

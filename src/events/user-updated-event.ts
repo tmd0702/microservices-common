@@ -9,6 +9,7 @@ export interface UserUpdatedEvent {
         last_name?: string;
         email?: string;
         phone_number?: string;
-        status?: UserStatus
+        status?: UserStatus;
+        face_id?: string;
     };
 }
