@@ -1,5 +1,7 @@
 import {Consumer as KafkaConsumer, KafkaMessage, logLevel, EachMessagePayload} from 'kafkajs';
 import { Topics } from './topics';
+import {KafkaWrapper} from "./kafka-wrapper";
+import {randomUUID} from "crypto";
 
 interface Event {
     topic: Topics;
@@ -11,8 +13,10 @@ export abstract class Consumer<T extends Event> {
     protected client: KafkaConsumer;
     abstract onMessage(data: T['data']): void;
 
-    constructor(client: KafkaConsumer) {
-        this.client = client;
+    constructor() {
+        const kafkaWrapper = new KafkaWrapper(['localhost:9092'], randomUUID());
+        kafkaWrapper.connect();
+        this.client = kafkaWrapper.consumer;
     }
     subscriptionOptions() {
         this.client.logger().setLogLevel(logLevel.ERROR);

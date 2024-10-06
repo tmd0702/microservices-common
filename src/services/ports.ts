@@ -10,5 +10,6 @@ export enum Ports {
     ATTENDANCES = 3858,
     VEHICLE_PARKING = 3859,
     EVENT_STORE = 3860,
-    TRACKING = 3861
+    TRACKING = 3861,
+    CAMERAS = 3862
 }
