@@ -6,10 +6,8 @@ interface Event {
 }
 export declare abstract class Consumer<T extends Event> {
     abstract topic: T['topic'];
-    protected client: KafkaConsumer;
     abstract onMessage(data: T['data']): void;
-    constructor();
-    subscriptionOptions(): void;
+    subscriptionOptions(client: KafkaConsumer): void;
     consume(): Promise<void>;
     parseMessage(msg: KafkaMessage): any;
 }

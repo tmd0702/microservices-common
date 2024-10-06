@@ -14,20 +14,18 @@ const kafkajs_1 = require("kafkajs");
 const kafka_wrapper_1 = require("./kafka-wrapper");
 const crypto_1 = require("crypto");
 class Consumer {
-    constructor() {
-        const kafkaWrapper = new kafka_wrapper_1.KafkaWrapper(['localhost:9092'], (0, crypto_1.randomUUID)());
-        kafkaWrapper.connect();
-        this.client = kafkaWrapper.consumer;
-    }
-    subscriptionOptions() {
-        this.client.logger().setLogLevel(kafkajs_1.logLevel.ERROR);
+    subscriptionOptions(client) {
+        client.logger().setLogLevel(kafkajs_1.logLevel.ERROR);
     }
     consume() {
         return __awaiter(this, void 0, void 0, function* () {
-            yield this.client.subscribe({ topic: this.topic }); //fromBeginning: true
-            this.subscriptionOptions();
+            const kafkaWrapper = new kafka_wrapper_1.KafkaWrapper(['localhost:9092'], (0, crypto_1.randomUUID)());
+            yield kafkaWrapper.connect();
+            const client = kafkaWrapper.consumer;
+            yield client.subscribe({ topic: this.topic }); //fromBeginning: true
+            this.subscriptionOptions(client);
             console.log(`Consumer subscribed to ${this.topic}!`);
-            yield this.client.run({
+            yield client.run({
                 eachMessage: (_a) => __awaiter(this, [_a], void 0, function* ({ topic, partition, message }) {
                     console.log(`Message received: ${this.topic} / ${partition}`);
                     const parsedData = this.parseMessage(message);
