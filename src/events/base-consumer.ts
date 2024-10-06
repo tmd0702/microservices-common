@@ -10,23 +10,21 @@ interface Event {
 
 export abstract class Consumer<T extends Event> {
     abstract topic: T['topic'];
-    protected client: KafkaConsumer;
+    // protected client: KafkaConsumer;
     abstract onMessage(data: T['data']): void;
 
-    constructor() {
-        const kafkaWrapper = new KafkaWrapper(['localhost:9092'], randomUUID());
-        kafkaWrapper.connect();
-        this.client = kafkaWrapper.consumer;
-    }
-    subscriptionOptions() {
-        this.client.logger().setLogLevel(logLevel.ERROR);
+    subscriptionOptions(client: KafkaConsumer) {
+        client.logger().setLogLevel(logLevel.ERROR);
     }
 
     async consume() {
-        await this.client.subscribe( { topic: this.topic }); //fromBeginning: true
-        this.subscriptionOptions()
+        const kafkaWrapper = new KafkaWrapper(['localhost:9092'], randomUUID());
+        await kafkaWrapper.connect();
+        const client: KafkaConsumer = kafkaWrapper.consumer;
+        await client.subscribe( { topic: this.topic }); //fromBeginning: true
+        this.subscriptionOptions(client);
         console.log(`Consumer subscribed to ${this.topic}!`);
-        await this.client.run({
+        await client.run({
             eachMessage: async ({ topic, partition, message }: EachMessagePayload) => {
                 console.log(`Message received: ${this.topic} / ${partition}`);
                 const parsedData = this.parseMessage(message);
