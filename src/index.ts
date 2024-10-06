@@ -45,4 +45,6 @@ export * from './events/enums/transaction-status';
 export * from './events/enums/attendance-status';
 export * from './events/enums/parking-ticket-status';
 
+export * from './events/camera-streaming-event';
+
 export * from './services/ports';

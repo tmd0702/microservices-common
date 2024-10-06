@@ -12,5 +12,7 @@ var Ports;
     Ports[Ports["EMPLOYEES"] = 3856] = "EMPLOYEES";
     Ports[Ports["DEPARTMENTS"] = 3857] = "DEPARTMENTS";
     Ports[Ports["ATTENDANCES"] = 3858] = "ATTENDANCES";
+    Ports[Ports["VEHICLE_PARKING"] = 3859] = "VEHICLE_PARKING";
     Ports[Ports["EVENT_STORE"] = 3860] = "EVENT_STORE";
+    Ports[Ports["TRACKING"] = 3861] = "TRACKING";
 })(Ports || (exports.Ports = Ports = {}));
