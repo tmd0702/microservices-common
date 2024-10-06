@@ -56,4 +56,5 @@ __exportStar(require("./events/enums/order-status"), exports);
 __exportStar(require("./events/enums/transaction-status"), exports);
 __exportStar(require("./events/enums/attendance-status"), exports);
 __exportStar(require("./events/enums/parking-ticket-status"), exports);
+__exportStar(require("./events/camera-streaming-event"), exports);
 __exportStar(require("./services/ports"), exports);

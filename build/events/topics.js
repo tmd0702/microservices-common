@@ -33,4 +33,14 @@ var Topics;
     Topics["CameraUpdated"] = "camera.updated";
     Topics["LocationCreated"] = "location.created";
     Topics["LocationUpdated"] = "location.updated";
+    // Streaming
+    Topics["CameraStreamingB4"] = "camera.streaming.b4";
+    Topics["CameraStreamingB3"] = "camera.streaming.b3";
+    Topics["CameraStreamingB2"] = "camera.streaming.b2";
+    Topics["CameraStreamingB1"] = "camera.streaming.b1";
+    Topics["CameraStreamingG"] = "camera.streaming.g";
+    Topics["CameraStreaming01"] = "camera.streaming.01";
+    Topics["CameraStreaming02"] = "camera.streaming.02";
+    Topics["CameraStreaming03"] = "camera.streaming.03";
+    Topics["CameraStreaming04"] = "camera.streaming.04";
 })(Topics || (exports.Topics = Topics = {}));

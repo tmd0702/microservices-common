@@ -19,5 +19,14 @@ export declare enum Topics {
     CameraCreated = "camera.created",
     CameraUpdated = "camera.updated",
     LocationCreated = "location.created",
-    LocationUpdated = "location.updated"
+    LocationUpdated = "location.updated",
+    CameraStreamingB4 = "camera.streaming.b4",
+    CameraStreamingB3 = "camera.streaming.b3",
+    CameraStreamingB2 = "camera.streaming.b2",
+    CameraStreamingB1 = "camera.streaming.b1",
+    CameraStreamingG = "camera.streaming.g",
+    CameraStreaming01 = "camera.streaming.01",
+    CameraStreaming02 = "camera.streaming.02",
+    CameraStreaming03 = "camera.streaming.03",
+    CameraStreaming04 = "camera.streaming.04"
 }

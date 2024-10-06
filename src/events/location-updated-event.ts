@@ -6,7 +6,7 @@ export interface LocationUpdatedEvent {
       id: string;
       name: string;
       address: string;
-      floor_number: number;
+      floor_number: string;
       zone_name: string;
     };
 }
